@@ -44,7 +44,7 @@ set wrap
 :map ,b g<C-]>
 :map ,B <C-W>g<C-]>
 " run ctags in the background
-:if match(expand('%:p'), "/Volumes/SecureInfiniteCode/src/aa") >= 0
+:if match(expand('%:p'), "/Volumes/SecureInfiniteCode/src/aa/") >= 0
     :silent ! ctags --languages=python --python-kinds=-i --exclude=build --exclude=src --exclude=binary -R . > /dev/null 2>&1 & 
 :endif
 
