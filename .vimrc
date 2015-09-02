@@ -36,7 +36,7 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 " iPython "
 """""""""""
 " copy the ipython kernel file from virtual machine
-:silent ! ( IP_ADDRESS=10.11.12.13; nc -w 1 -z ${IP_ADDRESS} 22 && scp vm-appannie:/home/vagrant/.ipython/profile_default/security/kernel-*.json ~/kernel.json && cat ~/kernel.json | sed "s/0.0.0.0/${IP_ADDRESS}/" > ~/appannie-kernel.json ) > /dev/null 2>&1 < /dev/null &
+" :silent ! ( IP_ADDRESS=10.11.12.13; nc -w 1 -z ${IP_ADDRESS} 22 && scp vm-appannie:/home/vagrant/.ipython/profile_default/security/kernel-*.json ~/kernel.json && cat ~/kernel.json | sed "s/0.0.0.0/${IP_ADDRESS}/" > ~/appannie-kernel.json ) > /dev/null 2>&1 < /dev/null &
 " for manual invocation
 :map ,ipa :IPython --existing ~/appannie-kernel.json<CR>
 :map <F7> <Plug>(IPython-RunLines)
