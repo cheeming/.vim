@@ -54,4 +54,4 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 :endif
 
 " for manual run
-:map ,ct :let x = system("ctags --languages=python,javascript --python-kinds=-i --exclude=build --exclude=src --exclude=binary -R . `cat .ctags_paths` &")<CR>
+:map ,ct :let x = system("ctags --languages=python --python-kinds=-i --exclude=build --exclude=src --exclude=binary -R . `cat .ctags_paths` &")<CR>
